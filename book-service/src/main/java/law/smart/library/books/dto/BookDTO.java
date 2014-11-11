@@ -1,14 +1,10 @@
 package law.smart.library.books.dto;
 
-import java.time.LocalDate;
-
 public class BookDTO {
 
     private String id;
     private String title;
     private String author;
-    private String status;
-    private LocalDate returnDate;
 
     public String getId() {
         return id;
@@ -33,20 +29,5 @@ public class BookDTO {
     public void setAuthor(String author) {
         this.author = author;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public LocalDate getReturnDate() {
-        return returnDate;
-    }
-
-    public void setReturnDate(LocalDate returnDate) {
-        this.returnDate = returnDate;
-    }
+    
 }

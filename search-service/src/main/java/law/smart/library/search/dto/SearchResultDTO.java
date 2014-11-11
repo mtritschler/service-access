@@ -1,11 +1,14 @@
 package law.smart.library.search.dto;
 
-public class BookDTO {
+import java.time.LocalDate;
+
+public class SearchResultDTO {
     
     private String id;
     private String title;
     private String author;
     private String status;
+    private LocalDate returnDate;
 
     public String getId() {
         return id;
@@ -37,5 +40,13 @@ public class BookDTO {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public LocalDate getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(LocalDate returnDate) {
+        this.returnDate = returnDate;
     }
 }
