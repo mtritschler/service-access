@@ -5,24 +5,21 @@ import law.smart.library.books.dto.BookDTO;
 import law.smart.library.checkout.CheckoutService;
 import law.smart.library.checkout.dto.ReceiptDTO;
 import law.smart.library.search.dto.SearchResultDTO;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
-class ActiveMQSearchService implements SearchService {
+public class SearchServiceImpl implements SearchService {
 
-    @Autowired
-    private BookService bookService;
+    private final BookService bookService;
+    private final CheckoutService checkoutService;
 
-    @Autowired
-    private CheckoutService checkoutService;
+    public SearchServiceImpl(BookService bookService, CheckoutService checkoutService) {
+        this.bookService = bookService;
+        this.checkoutService = checkoutService;
+    }
 
     @Override
-    @JmsListener(destination = "search-service/findByAuthor")
     public List<SearchResultDTO> findByAuthor(String author) {
         List<BookDTO> allBooks = bookService.getAllBooks();
         List<SearchResultDTO> result = new ArrayList<>();
