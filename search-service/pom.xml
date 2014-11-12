@@ -6,7 +6,7 @@
 
     <groupId>law.smart.libary</groupId>
     <artifactId>search-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,12 +17,12 @@
             <dependency>
                 <groupId>law.smart</groupId>
                 <artifactId>book-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1</version>
             </dependency>
             <dependency>
                 <groupId>law.smart</groupId>
                 <artifactId>checkout-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
