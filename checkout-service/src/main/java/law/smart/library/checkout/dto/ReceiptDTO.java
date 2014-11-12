@@ -4,8 +4,13 @@ import java.time.LocalDate;
 
 public class ReceiptDTO {
     
+    public static enum LoanStatus {
+        AVAILABLE, TAKEN
+    }
+    
     private String bookId;
     private LocalDate returnDate;
+    private LoanStatus status = LoanStatus.AVAILABLE;
 
     public String getBookId() {
         return bookId;
@@ -21,5 +26,13 @@ public class ReceiptDTO {
 
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
+    }
+
+    public LoanStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(LoanStatus status) {
+        this.status = status;
     }
 }
