@@ -1,10 +1,7 @@
-package law.smart.library.checkout;
+package law.smart.library.checkout.config;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
@@ -12,11 +9,9 @@ import org.springframework.jms.support.destination.DynamicDestinationResolver;
 
 import javax.jms.ConnectionFactory;
 
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
 @EnableJms
-public class Application {
+@Configuration
+public class ActiveMQConfig {
 
     @Bean
     ConnectionFactory connectionFactory() {
@@ -31,8 +26,4 @@ public class Application {
         return factory;
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class);
-    }
-    
 }

@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>law.smart.library</groupId>
-            <artifactId>checkout-service-activemq-client</artifactId>
+            <artifactId>checkout-service-client-activemq</artifactId>
         </dependency>
 
     </dependencies>
@@ -70,8 +70,8 @@
             </dependency>
             <dependency>
                 <groupId>law.smart.library</groupId>
-                <artifactId>checkout-service-activemq-client</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <artifactId>checkout-service-client-activemq</artifactId>
+                <version>0.0.3</version>
             </dependency>
 
         </dependencies>

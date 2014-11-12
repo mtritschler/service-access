@@ -4,32 +4,29 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>law.smart.library</groupId>
-    <artifactId>checkout-service-activemq-client</artifactId>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.1.8.RELEASE</version>
+    </parent>
+
+    <groupId>law.smart.experimental</groupId>
+    <artifactId>spring-boot-checkout-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>4.1.0.RELEASE</spring.version>
     </properties>
-    
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jms</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-client</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>law.smart.library</groupId>
-            <artifactId>checkout-service</artifactId>
-        </dependency>
-    </dependencies>
-    
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -64,28 +61,28 @@
             </plugins>
         </pluginManagement>
     </build>
-    
+
+    <dependencies>
+        <dependency>
+            <groupId>law.smart.library</groupId>
+            <artifactId>checkout-service-impl-activemq</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
-           
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jms</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>activemq-client</artifactId>
-                <version>5.10.0</version>
-            </dependency>
-
             <dependency>
                 <groupId>law.smart.library</groupId>
-                <artifactId>checkout-service</artifactId>
+                <artifactId>checkout-service-impl-activemq</artifactId>
                 <version>0.0.3</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
+
+
 </project>

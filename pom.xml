@@ -17,9 +17,9 @@
         <module>book-service</module>
         <module>checkout-service</module>
         <module>search-service</module>
-        <module>checkout-service-activemq</module>
         <module>search-service-activemq</module>
         <module>spring-boot-book-service</module>
+        <module>spring-boot-checkout-service</module>
     </modules>
 
 </project>
