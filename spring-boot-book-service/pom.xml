@@ -4,22 +4,29 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>law.smart.library</groupId>
-    <artifactId>book-service</artifactId>
-    <packaging>pom</packaging>
-    <version>0.0.2</version>
-    <modules>
-        <module>book-service-api</module>
-        <module>book-service-impl</module>
-        <module>book-service-impl-activemq</module>
-        <module>book-service-client-activemq</module>
-    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.1.8.RELEASE</version>
+    </parent>
+
+    <groupId>law.smart.experimental</groupId>
+    <artifactId>spring-boot-book-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.1.0.RELEASE</spring.version>
     </properties>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -55,40 +62,24 @@
         </pluginManagement>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>law.smart.library</groupId>
+            <artifactId>book-service-impl-activemq</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>activemq-client</artifactId>
-                <version>5.10.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>activemq-broker</artifactId>
-                <version>5.10.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jms</artifactId>
-                <version>4.1.0.RELEASE</version>
-            </dependency>
-
-            <dependency>
                 <groupId>law.smart.library</groupId>
-                <artifactId>book-service</artifactId>
+                <artifactId>book-service-impl-activemq</artifactId>
                 <version>0.0.2</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.7.7</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>1.1.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

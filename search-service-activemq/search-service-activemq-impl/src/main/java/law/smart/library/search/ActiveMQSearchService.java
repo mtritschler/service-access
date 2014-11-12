@@ -17,10 +17,10 @@ class ActiveMQSearchService implements SearchService {
 
     @Autowired
     private BookService bookService;
-    
+
     @Autowired
     private CheckoutService checkoutService;
-    
+
     @Override
     @JmsListener(destination = "search-service/findByAuthor")
     public List<SearchResultDTO> findByAuthor(String author) {

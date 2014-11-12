@@ -8,18 +8,18 @@
     <artifactId>service-access</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <modules>
-      <module>book-service</module>
-      <module>checkout-service</module>
-      <module>search-service</module>
-      <module>book-service-amq</module>
-      <module>checkout-service-activemq</module>
-      <module>search-service-activemq</module>
+        <module>book-service</module>
+        <module>checkout-service</module>
+        <module>search-service</module>
+        <module>checkout-service-activemq</module>
+        <module>search-service-activemq</module>
+        <module>spring-boot-book-service</module>
     </modules>
 
 </project>

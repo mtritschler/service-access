@@ -35,7 +35,7 @@
         </dependency>
         <dependency>
             <groupId>law.smart.library</groupId>
-            <artifactId>book-service-activemq-client</artifactId>
+            <artifactId>book-service-client-activemq</artifactId>
         </dependency>
         <dependency>
             <groupId>law.smart.library</groupId>
@@ -65,8 +65,8 @@
             </dependency>
             <dependency>
                 <groupId>law.smart.library</groupId>
-                <artifactId>book-service-activemq-client</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <artifactId>book-service-client-activemq</artifactId>
+                <version>0.0.2</version>
             </dependency>
             <dependency>
                 <groupId>law.smart.library</groupId>
