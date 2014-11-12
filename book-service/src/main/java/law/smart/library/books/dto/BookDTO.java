@@ -1,6 +1,8 @@
 package law.smart.library.books.dto;
 
-public class BookDTO {
+import java.io.Serializable;
+
+public class BookDTO implements Serializable {
 
     private String id;
     private String title;

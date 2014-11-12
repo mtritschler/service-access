@@ -1,8 +1,9 @@
 package law.smart.library.checkout.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ReceiptDTO {
+public class ReceiptDTO implements Serializable {
     
     public static enum LoanStatus {
         AVAILABLE, TAKEN

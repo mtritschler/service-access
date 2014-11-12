@@ -5,11 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>law.smart.library</groupId>
-    <artifactId>checkout-service</artifactId>
-    <version>0.0.3</version>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <artifactId>book-service-activemq</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    
+    <modules>
+        <module>book-service-activemq-client</module>
+        <module>book-service-activemq-impl</module>
+    </modules>
 
 </project>
