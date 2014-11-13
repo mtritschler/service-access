@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-class ActiveMQBookService implements BookService {
+public class ActiveMQBookService implements BookService {
 
     private final BookService delegate;
 
